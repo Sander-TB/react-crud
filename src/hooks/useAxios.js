@@ -7,7 +7,7 @@ const url = process.env.REACT_APP_BASE_URL;
 export default function useAxios() {
 	const [auth] = useContext(AuthContext);
 	const apiClient = axios.create({
-		baseUrl: url,
+		baseURL: url,
 	});
 
 	apiClient.interceptors.request.use(function (config) {

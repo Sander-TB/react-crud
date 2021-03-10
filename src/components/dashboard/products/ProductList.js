@@ -22,7 +22,7 @@ export default function ProductList() {
 			}
 		}
 		getAllProducts();
-	}, []);
+	}, [http]);
 	if (loading) return <div>Loading...</div>;
 	if (error) return <div>An error happened</div>;
 	return (
