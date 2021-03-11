@@ -8,6 +8,7 @@ import Heading from "../../layout/Heading";
 import useAxios from "../../../hooks/useAxios";
 import { BASE_URL, PRODUCTS_ENDPOINT } from "../../../constants/api";
 import { productSchema } from "../../../schemas/productSchema";
+import DeleteProductButton from "./DeleteProductButton";
 
 export default function EditProduct() {
 	const [product, setProduct] = useState(null);
@@ -117,6 +118,7 @@ export default function EditProduct() {
 
 					<button>Update</button>
 					<hr />
+					<DeleteProductButton id={product.id} title={product.title} />
 				</fieldset>
 			</form>
 		</DashboardPage>
