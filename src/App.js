@@ -4,6 +4,8 @@ import HomePage from "./components/home/HomePage";
 import LoginPage from "./components/login/LoginPage";
 import DashboardPage from "./components/dashboard/DashboardPage";
 import ProductsPage from "./components/dashboard/products/ProductsPage";
+import AddProducts from "./components/dashboard/products/AddProducts";
+import EditProduct from "./components/dashboard/products/EditProduct";
 import Nav from "./components/layout/Nav";
 import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
@@ -27,6 +29,12 @@ function App() {
 						</Route>
 						<Route path='/dashboard/products' exact>
 							<ProductsPage />
+						</Route>
+						<Route path='/dashboard/products/add' exact>
+							<AddProducts />
+						</Route>
+						<Route path='/dashboard/product/edit/:id'>
+							<EditProduct />
 						</Route>
 					</Switch>
 				</div>

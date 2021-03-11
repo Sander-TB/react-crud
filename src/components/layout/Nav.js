@@ -15,8 +15,8 @@ function Nav() {
 			<Link to='/'>Home</Link>
 			{auth ? (
 				<>
-					{" "}
-					| <button onClick={logout}>Logout</button>{" "}
+					<Link to='/dashboard'>Dashboard</Link>|{" "}
+					<button onClick={logout}>Logout</button>{" "}
 				</>
 			) : (
 				<Link to='/login'>Login</Link>
